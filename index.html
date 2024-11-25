@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #87ceeb; /* 背景颜色 */
+      }
+      button {
+        padding: 20px 40px;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        background-color: #228B22;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: 10px;
+      }
+      button:hover {
+        background-color: #1E7B1E;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 开始按钮 -->
+    <button id="startButton">Start Game</button>
+    <button id="switchCharacterButton">Switch Character</button>
+
+    <script type="module">
+      const startButton = document.getElementById('startButton');
+      const switchCharacterButton = document.getElementById('switchCharacterButton');
+
+      // 点击"开始游戏"跳转到游戏页面
+      startButton.addEventListener('click', () => {
+        window.location.href = 'game.html';
+      });
+
+      // 点击"切换角色"跳转到角色选择页面
+      switchCharacterButton.addEventListener('click', () => {
+        window.location.href = 'character_switch.html';
+      });
+    </script>
+  </body>
+</html>
